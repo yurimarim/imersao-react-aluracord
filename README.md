@@ -1,3 +1,12 @@
+## Sobre o projeto
+
+Projeto desenvolvido durante a Imersão React Alura com objetivo de fixar e estruturar conhecimentos utilizando React Next.
+
+## Tecnologias Utilizadas
+
+- React
+- Next
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
