@@ -1,10 +1,11 @@
+import React, { useState } from 'react'
 import { Box, Text, TextField, Image, Button } from '@skynexui/components'
-import React from 'react'
+
 import appConfig from '../config.json'
 
 export default function ChatPage() {
-  const [mensagem, setMensagem] = React.useState('')
-  const [listaDeMensagens, setListaDeMensagens] = React.useState([])
+  const [message, setMessage] = useState('')
+  const [messageList, setMessageList] = useState([])
 
   /*
     // Usuário
@@ -17,15 +18,15 @@ export default function ChatPage() {
     - [X] Vamos usar o onChange usa o useState (ter if pra caso seja enter pra limpar a variavel)
     - [X] Lista de mensagens 
     */
-  function handleNovaMensagem(novaMensagem) {
-    const mensagem = {
-      id: listaDeMensagens.length + 1,
-      de: 'vanessametonini',
-      texto: novaMensagem
+  function handleNewMessage(newMessage) {
+    const message = {
+      id: messageList.length + 1,
+      user: 'yurimarim',
+      text: newMessage
     }
 
-    setListaDeMensagens([mensagem, ...listaDeMensagens])
-    setMensagem('')
+    setMessageList([message, ...messageList])
+    setMessage('')
   }
 
   return (
@@ -69,7 +70,7 @@ export default function ChatPage() {
             padding: '16px'
           }}
         >
-          <MessageList mensagens={listaDeMensagens} />
+          <MessageList messages={messageList} />
           {/* {listaDeMensagens.map((mensagemAtual) => {
                         return (
                             <li key={mensagemAtual.id}>
@@ -85,15 +86,15 @@ export default function ChatPage() {
             }}
           >
             <TextField
-              value={mensagem}
+              value={message}
               onChange={event => {
-                const valor = event.target.value
-                setMensagem(valor)
+                const value = event.target.value
+                setMessage(value)
               }}
               onKeyPress={event => {
                 if (event.key === 'Enter') {
                   event.preventDefault()
-                  handleNovaMensagem(mensagem)
+                  handleNewMessage(message)
                 }
               }}
               placeholder="Insira sua mensagem aqui..."
@@ -154,10 +155,10 @@ function MessageList(props) {
         marginBottom: '16px'
       }}
     >
-      {props.mensagens.map(mensagem => {
+      {props.messages.map(message => {
         return (
           <Text
-            key={mensagem.id}
+            key={message.id}
             tag="li"
             styleSheet={{
               borderRadius: '5px',
@@ -175,15 +176,15 @@ function MessageList(props) {
             >
               <Image
                 styleSheet={{
-                  width: '20px',
-                  height: '20px',
+                  width: '30px',
+                  height: '30px',
                   borderRadius: '50%',
                   display: 'inline-block',
                   marginRight: '8px'
                 }}
-                src={`https://github.com/vanessametonini.png`}
+                src={`https://github.com/yurimarim.png`}
               />
-              <Text tag="strong">{mensagem.de}</Text>
+              <Text tag="strong">{message.user}</Text>
               <Text
                 styleSheet={{
                   fontSize: '10px',
@@ -195,7 +196,7 @@ function MessageList(props) {
                 {new Date().toLocaleDateString()}
               </Text>
             </Box>
-            {mensagem.texto}
+            {message.text}
           </Text>
         )
       })}

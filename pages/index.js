@@ -62,7 +62,6 @@ export default function HomePage() {
             onSubmit={event => {
               /* evita comportamento padrão do Submit */
               event.preventDefault()
-              console.log('Alguém submeteu o form.')
               // window.location.href = '/chat' -- Jeito HTML
               router.push('/chat') /* Jeito React */
             }}
@@ -90,7 +89,6 @@ export default function HomePage() {
             <TextField
               value={username}
               onChange={event => {
-                console.log('Usuário digitou', event.target.value)
                 // Onde está o valor?
                 const valor = event.target.value
                 // Trocar o valor da variável através do React
