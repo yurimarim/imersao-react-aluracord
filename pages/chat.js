@@ -3,8 +3,9 @@ import appConfig from '../config.json'
 import { Box, Text, TextField, Image, Button } from '@skynexui/components'
 import { createClient } from '@supabase/supabase-js'
 
-// const SUPABASE_ANON_KEY =
-// const SUPABASE_URL =
+const SUPABASE_ANON_KEY =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MzM4NTY0NywiZXhwIjoxOTU4OTYxNjQ3fQ.iLXEDIts3xVnesc3d5TR48KsCq2Rytsnip66nEJdbp4'
+const SUPABASE_URL = 'https://ymundrxxwaljeeyvbzll.supabase.co'
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
 export default function ChatPage() {
