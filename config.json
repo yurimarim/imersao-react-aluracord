@@ -27,6 +27,16 @@
         "800": "#181F25",
         "900": "#101418",
         "999": "#080A0C"
+      },
+      "button":{
+        "buttonRed": "#800000",
+        "buttonGreenAlpha": "rgba(128,0,0,0.5)",
+        "buttonBlack": "#1C1C1C", 
+        "buttonBlackTAlpha": "rgba(0, 0, 0, 0.7)"
+      }, 
+      "background":{
+        "backgroundBlack": "rgba(0, 0, 0, 0.7)",
+        "backgroundGreen": "rgba(0,230,0,0.5)"
       }
     }
   },

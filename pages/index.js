@@ -63,7 +63,7 @@ export default function HomePage() {
               /* evita comportamento padrão do Submit */
               event.preventDefault()
               // window.location.href = '/chat' -- Jeito HTML
-              router.push('/chat') /* Jeito React */
+              router.push(`/chat?username=${username}`) /* Jeito React */
             }}
             styleSheet={{
               display: 'flex',
