@@ -5,9 +5,15 @@ import { createClient } from '@supabase/supabase-js'
 import { useRouter } from 'next/router'
 import { ButtonSendSticker } from '../src/components/ButtonSendSticker'
 
+const supabaseUrl = 'https://ymundrxxwaljeeyvbzll.supabase.co'
+const supabaseAnonKey =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MzM4NTY0NywiZXhwIjoxOTU4OTYxNjQ3fQ.iLXEDIts3xVnesc3d5TR48KsCq2Rytsnip66nEJdbp4'
+
 const supabaseClient = createClient(
-  process.env.NEXT_PUBLIC_URL,
-  process.env.NEXT_PUBLIC_ANON_KEY
+  // process.env.NEXT_PUBLIC_URL,
+  // process.env.NEXT_PUBLIC_ANON_KEY
+  supabaseUrl,
+  supabaseAnonKey
 )
 
 function listenMessagesInRealTime(addMessage) {
