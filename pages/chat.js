@@ -1,20 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import appConfig from '../config.json'
 import { Box, Text, TextField, Image, Button } from '@skynexui/components'
-import { createClient } from '@supabase/supabase-js'
 import { useRouter } from 'next/router'
 import { ButtonSendSticker } from '../src/components/ButtonSendSticker'
-
-const supabaseUrl = 'https://ymundrxxwaljeeyvbzll.supabase.co'
-const supabaseAnonKey =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MzM4NTY0NywiZXhwIjoxOTU4OTYxNjQ3fQ.iLXEDIts3xVnesc3d5TR48KsCq2Rytsnip66nEJdbp4'
-
-const supabaseClient = createClient(
-  // process.env.NEXT_PUBLIC_URL,
-  // process.env.NEXT_PUBLIC_ANON_KEY
-  supabaseUrl,
-  supabaseAnonKey
-)
+import { Modal } from '../src/components/Modal/Modal'
+import { supabaseClient } from '../src/services/supabase'
 
 function listenMessagesInRealTime(addMessage) {
   return supabaseClient
@@ -176,6 +166,8 @@ function Header() {
 }
 
 function MessageList(props) {
+  const [isOpen, setIsOpen] = useState(false)
+
   // console.log(props)
   return (
     <Box
@@ -205,7 +197,9 @@ function MessageList(props) {
           >
             <Box
               styleSheet={{
-                marginBottom: '8px'
+                marginBottom: '8px',
+                display: 'flex',
+                alignItems: 'center'
               }}
             >
               <Image
@@ -217,7 +211,9 @@ function MessageList(props) {
                   marginRight: '8px'
                 }}
                 src={`https://github.com/${message.user}.png`}
+                onClick={() => setIsOpen(!isOpen)}
               />
+              {!isOpen ? <Modal /> : null}
               <Text tag="strong">{message.user}</Text>
               <Text
                 styleSheet={{
