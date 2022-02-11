@@ -11,7 +11,7 @@ Projeto desenvolvido durante a Imersão React Alura com objetivo de fixar e estr
 
 ## Challenges
 [] - 1 - Fazer um hover na profile picture. (WIP)
-[] - 2 - Customizar barra de navegação (overflow).
+[] - 2 - Customizar barra de navegação (overflow). (WIP)
 [] - 3 - Diminuir tamanho do Sticker.
 [] - 4 - Limpar mensagems (limpar array).
 [] - 5 - Checar se o usuário do Github existe.
