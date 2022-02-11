@@ -7,10 +7,10 @@ Projeto desenvolvido durante a Imersão React Alura com objetivo de fixar e estr
 - React
 - Next
 - Supabase
-- Dotenv (WIP)
+- Dotenv
 
 ## Challenges
-[] - 1 - Fazer um hover na profile picture.
+[] - 1 - Fazer um hover na profile picture. (WIP)
 [] - 2 - Customizar barra de navegação (overflow).
 [] - 3 - Diminuir tamanho do Sticker.
 [] - 4 - Limpar mensagems (limpar array).
