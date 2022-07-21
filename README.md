@@ -4,18 +4,10 @@ Projeto desenvolvido durante a Imersão React Alura com objetivo de fixar e estr
 
 ## Tecnologias Utilizadas
 
-- React
-- Next
-- Supabase
-- Dotenv (WIP)
-
-## Challenges
-[   ] - #1 - Fazer um hover na profile picture. </br>
-[   ] - #2 - Customizar barra de navegação (overflow). </br>
-[   ] - #3 - Diminuir tamanho do Sticker. </br>
-[   ] - #4 - Limpar mensagems (limpar array). </br>
-[   ] - #5 - Checar se o usuário do Github existe. </br>
-[   ] - #6 - Informar dados do Github. </br>
+- [ ] React
+- [ ] Next
+- [ ] Supabase
+- [ ] Dotenv (WIP)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
